@@ -9,6 +9,12 @@ export const runTest = (test: any, expect: any) => {
     expect(immerTheArray(array1)).toEqual(array2);
   });
 
+  test("PASSES IN BOTH: toEqual equivalent array (non-empty, BOTH immer'd)", () => {
+    const array1 = [""];
+    const array2 = [""];
+    expect(immerTheArray(array1)).toEqual(immerTheArray(array2));
+  });
+
   test("PASSES IN BOTH: toEqual equivalent array (empty)", () => {
     const array1: string[] = [];
     const array2: string[] = [];
@@ -33,5 +39,15 @@ export const runTest = (test: any, expect: any) => {
   test("PASSES IN BOTH: toBe itself (empty)", () => {
     const array1: string[] = [];
     expect(immerTheArray(array1)).toBe(array1);
+  });
+
+  test("PASSES IN BOTH: toBe itself (non-empty)", () => {
+    const array1 = [""];
+    expect(array1).toEqual(array1);
+  });
+
+  test("PASSES IN BOTH: toBe itself (empty)", () => {
+    const array1: string[] = [];
+    expect(array1).toEqual(array1);
   });
 };
