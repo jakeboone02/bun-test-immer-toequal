@@ -2,6 +2,7 @@
   "name": "bun-test-equal",
   "version": "0.1.79",
   "dependencies": {
+    "immer": "^9.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^3.0.3"
@@ -12,7 +13,16 @@
     ]
   },
   "devDependencies": {
-    "typescript": "latest",
-    "react-refresh": "0.10.0"
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/jest": "^29.5.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "babel-jest": "^29.5.0",
+    "bun-types": "^0.5.7",
+    "jest": "^29.5.0",
+    "react-refresh": "0.10.0",
+    "typescript": "^5.0.2"
   }
 }
